@@ -21,7 +21,7 @@ async def home():
 
     with ui.element("section").classes("pa-hero"):
         ui.label("PyArcade").classes("pa-logo")
-        ui.label("Six games written in Python. They run on the server and play right here in your browser.").classes("pa-tagline")
+        ui.label("Timeless arcade classics, ready when you are. No downloads, no setup. Just pick a game and play.").classes("pa-tagline")        
         ui.link("Pick a game", "#games").classes("pa-hero-btn")
 
     with ui.column().classes("pa-wrap").props("id=games"):
