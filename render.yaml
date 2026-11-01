@@ -1,0 +1,23 @@
+# Render (https://render.com): New > Blueprint > select this repo. Creates both services.
+# After the first deploy, set BACKEND_URL and PUBLIC_BACKEND_URL on "pyarcade-web"
+# to the public address of "pyarcade-api" (for example https://pyarcade-api.onrender.com).
+services:
+  - type: web
+    name: pyarcade-api
+    runtime: docker
+    dockerContext: ./backend
+    dockerfilePath: ./backend/Dockerfile
+    healthCheckPath: /api/health
+    envVars:
+      - key: MAX_SESSIONS
+        value: "4"
+  - type: web
+    name: pyarcade-web
+    runtime: docker
+    dockerContext: ./frontend
+    dockerfilePath: ./frontend/Dockerfile
+    envVars:
+      - key: BACKEND_URL
+        sync: false
+      - key: PUBLIC_BACKEND_URL
+        sync: false
