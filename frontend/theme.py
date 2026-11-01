@@ -123,6 +123,20 @@ a { color: inherit; text-decoration: none; }
 .pa-nav-cta { padding: .5rem 1.1rem; border-radius: 10px; background: var(--accent); color: #0b0b12; font-size: .9rem; font-weight: 600;
               transition: transform .25s var(--ease), box-shadow .25s var(--ease); }
 .pa-nav-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 28px -10px var(--accent); }
+/* ---------- homepage hero + background video ---------- */
+html { scroll-behavior: smooth; }
+.pa-bgvideo { position: fixed; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+.pa-bgshade { position: fixed; inset: 0; z-index: -1;
+              background: linear-gradient(rgba(11,11,18,.55), rgba(11,11,18,.88)); }
+.pa-hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
+           text-align: center; padding: 6rem 1.5rem 4rem; }
+.pa-hero .pa-logo { margin-top: 0; }
+.pa-hero .pa-tagline { margin-left: auto; margin-right: auto; color: #cfcfe3; }
+.pa-hero-btn { margin-top: 2.25rem; padding: .95rem 2.4rem; border-radius: 14px; background: var(--accent); color: #0b0b12;
+               font-weight: 600; font-size: 1.05rem; animation: pa-rise .7s var(--ease) .16s backwards;
+               transition: transform .25s var(--ease), box-shadow .25s var(--ease); }
+.pa-hero-btn:hover { transform: translateY(-3px); box-shadow: 0 14px 34px -12px var(--accent); }
+#games { scroll-margin-top: 80px; padding-top: 3rem; }
 .pa-user { color: var(--text) !important; font-family: var(--body) !important; }
 
 .pa-auth-wrap { width: 100%; align-items: center; padding: 4rem 1.5rem; }

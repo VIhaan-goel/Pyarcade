@@ -16,7 +16,6 @@ def navbar():
         with ui.element("div").classes("pa-nav-inner"):
             ui.link("PyArcade", "/").classes("pa-small-logo")
             with ui.element("div").classes("pa-nav-right"):
-                ui.link("Games", "/").classes("pa-nav-link")
                 if user:
                     with ui.button(user["username"], icon="account_circle").props("flat no-caps").classes("pa-user"):
                         with ui.menu():
