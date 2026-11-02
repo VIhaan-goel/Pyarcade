@@ -5,6 +5,7 @@ services:
   - type: web
     name: pyarcade-api
     runtime: docker
+    plan: free
     dockerContext: ./backend
     dockerfilePath: ./backend/Dockerfile
     healthCheckPath: /api/health
@@ -21,3 +22,5 @@ services:
         sync: false
       - key: PUBLIC_BACKEND_URL
         sync: false
+      - key: STORAGE_SECRET
+        generateValue: true
